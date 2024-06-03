@@ -1,0 +1,24 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="https://github.com/avaloniaui/avalonia"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodels="clr-namespace:GameStoreApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="GameStoreApp.Views.LibraryView">
+	<Design.DataContext>
+		<viewmodels:LibraryViewModel/>
+	</Design.DataContext>
+	<StackPanel>
+		<ListBox ItemsSource="{Binding UserLibrary}">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<StackPanel Orientation="Horizontal">
+						<TextBlock Text="{Binding NameGame}" Margin="10"/>
+						<TextBlock Text="{Binding DateBuy}" Margin="10"/>
+						<TextBlock Text="{Binding FinalCost}" Margin="10"/>
+					</StackPanel>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+	</StackPanel>
+</UserControl>

@@ -1,0 +1,16 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="https://github.com/avaloniaui/avalonia"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodels="clr-namespace:GameStoreApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="GameStoreApp.Views.LoginView">
+	<Design.DataContext>
+		<viewmodels:LoginViewModel/>
+	</Design.DataContext>
+	<StackPanel >
+		<TextBox Text="{Binding Login, Mode=TwoWay}" Watermark="Login" Margin="10"/>
+		<TextBox Text="{Binding Password, Mode=TwoWay}" Watermark="Password" PasswordChar="*" Margin="10"/>
+		<Button Command="{Binding LoginCommand}" Content="Login" Margin="10"/>
+	</StackPanel>
+</UserControl>
