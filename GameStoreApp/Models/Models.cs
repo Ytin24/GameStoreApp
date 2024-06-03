@@ -64,6 +64,8 @@ public class Library {
     public User User { get; set; }
     public ICollection<LibraryGame> LibraryGames { get; set; } = new List<LibraryGame>();
 }
+
+// Models/LibraryGame.cs
 public class LibraryGame {
     public int LibraryID { get; set; }
     public Library Library { get; set; }
